@@ -1,0 +1,262 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="formbold-main-wrapper">
+    <div class="formbold-form-wrapper">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            
+            <div class='center-btn'>
+                <button type="submit" class="formbold-btn">Upload</button>
+            </div> 
+        </form>
+    </div>
+</div>
+
+
+<style>
+  body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-image: url("https://lostandfoundnetworks.com/storage/app/logo/body-background-61104203485c1.jpeg");
+  }
+
+  .formbold-main-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px;
+  }
+
+  .formbold-form-wrapper {
+      margin: 0 auto;
+      max-width: 570px;
+      width: 100%;
+      background: #f9f9f9;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .formbold-form-title h2, .formbold-form-title h3 {
+      font-weight: 600;
+      font-size: 24px;
+      color: #07074d;
+      margin-top: 20px;
+  }
+
+  .formbold-form-input {
+      width: 90%;
+      padding: 13px 22px;
+      border-radius: 5px;
+      border: 1px solid #dde3ec;
+      background: #ffffff;
+      font-weight: 500;
+      font-size: 16px;
+      color: #536387;
+      outline: none;
+      resize: none;
+      transition: border-color 0.2s ease-in-out;
+  }
+
+  .formbold-form-input:focus {
+      border-color: #6a64f1;
+  }
+
+  .formbold-mb-3 {
+      margin-bottom: 20px;
+  }
+
+  .formbold-form-label {
+      font-weight: 300;
+      font-size: 16px;
+      color: #07074d;
+      line-height: 24px;
+      display: block;
+      margin-bottom: 10px;
+  }
+
+  
+  .center-btn {
+      text-align: center;
+  }
+
+  .formbold-btn {
+      font-size: 16px;
+      border-radius: 5px;
+      padding: 14px 25px;
+      border: none;
+      font-weight: 500;
+      background-color: #6a64f1;
+      color: white;
+      cursor: pointer;
+      margin-top: 25px;
+      transition: background-color 0.2s ease-in-out;
+  }
+
+  .formbold-btn:hover {
+      background-color: #554ee3;
+  }
+
+  .dropdown {
+      width: 100%;
+      padding: 13px 22px;
+      border-radius: 5px;
+      border: 1px solid #dde3ec;
+      background: #ffffff;
+      font-weight: 500;
+      font-size: 16px;
+      color: #536387;
+      outline: none;
+      resize: none;
+      transition: border-color 0.2s ease-in-out;
+  }
+
+  .dropdown:focus {
+      border-color: #6a64f1;
+  }
+
+  .red-mark {
+      color: red;
+      font-weight: bold;
+  }
+
+
+  .custum-file-upload {
+    height: 200px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    gap: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed Black;
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  .custum-file-upload .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custum-file-upload .icon img {
+    height: 50px;
+  }
+  
+  .custum-file-upload .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custum-file-upload .text span {
+    font-weight: 400;
+    color: rgba(75, 85, 99, 1);
+  }
+  
+  .custum-file-upload input {
+    display: none;
+  }
+
+  .formbold-form-input2 {
+    width: 90%;
+    padding: 13px 22px;
+    border-radius: 5px;
+    border: 1px solid #dde3ec;
+    background: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    color: #536387;
+    outline: none;
+    resize: none;
+    height: 5cm;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.formbold-form-input2:focus {
+    border-color: #6a64f1;
+}
+
+  .formbold-form-input3 {
+    width: 90%;
+    padding: 13px 22px;
+    border-radius: 5px;
+    border: 1px solid #dde3ec;
+    background: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    color: #536387;
+    outline: none;
+    resize: none;
+    padding-left: 50px; /* Adjust the padding to create space for the image */
+    background-image: url('https://static.vecteezy.com/system/resources/previews/000/571/441/original/mail-icon-vector.jpg'); /* Replace 'your-image-url.png' with the actual image URL */
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Adjust the position of the image */
+    background-size: 30px; /* Adjust the size of the image */
+    transition: border-color 0.2s ease-in-out;
+  }
+
+  .formbold-form-input4 {
+    width: 90%;
+    padding: 13px 22px;
+    border-radius: 5px;
+    border: 1px solid #dde3ec;
+    background: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    color: #536387;
+    outline: none;
+    resize: none;
+    padding-left: 50px; /* Adjust the padding to create space for the image */
+    background-image: url('https://th.bing.com/th?id=OSK.cf276ed33322d8ef6e4b3bd0a835d4ea&w=117&h=82&c=7&o=6&dpr=1.5&pid=SANGAM'); /* Replace 'your-image-url.png' with the actual image URL */
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Adjust the position of the image */
+    background-size: 30px; /* Adjust the size of the image */
+    overflow:hidden;
+  }
+
+  .radio-container {
+      
+    color: #536387;
+    font-size: 14px;
+    line-height: 24px;
+    display: block;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+/* Style for radio button labels */
+.radio-label {
+    margin-right: 70px; /* Add spacing between the radio buttons */
+    font-size: 16px;
+    margin-top: 10px;
+    color: #536387;
+}
+
+/* Style for radio buttons */
+.radio-input {
+    margin-right: 2px; /* Add spacing between the radio button and label */
+    margin-top: 10px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+}
+
+</style>
+<script>
+    // Your JavaScript code goes here
+</script>
+{% endblock %}

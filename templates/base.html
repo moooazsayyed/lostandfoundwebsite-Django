@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>head</title>
+    <link rel='stylesheet' href='static/css/base.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a class="logo" href="{% url 'home' %}">
+            <img src="https://lostandfoundnetworks.com/storage/app/logo/logo-5d2f6b5b70a2e.png" alt="Your Logo">
+        </a>
+        <div class="dropdown">
+            <button class="dropdown-button" onclick="toggleDropdown()">Select Country</button>
+            <div class="dropdown-content" id="myDropdown">
+                <div class="dropdown-item">
+                    <img src="https://flagpedia.net/data/flags/h160/in.webp" alt="Country Flag">
+                    <span class="dropdown-text">India</span>
+                </div>
+                <div class="dropdown-item">
+                    <img src="https://flagpedia.net/data/flags/h160/us.webp" alt="Country Flag">
+                    <span class="dropdown-text">U.S.A</span>
+                </div>
+                <div class="dropdown-item">
+                    <img src="https://flagpedia.net/data/flags/h160/cn.webp" alt="Country Flag">
+                    <span class="dropdown-text">China</span>
+                </div>
+                <!-- Add more dropdown items with images as needed -->
+            </div>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="https://play.google.com/store/apps/details?id=com.lostandfoundnetworks">Download App</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/Register">Register</a></li>
+        </ul>
+       
+    </header>
+    {% block body%}{% endblock body%}
+
+  
+    <script>
+        // JavaScript for Dropdown
+        function toggleDropdown() {
+            var dropdown = document.getElementById("myDropdown");
+            if (dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+            } else {
+                dropdown.style.display = "block";
+            }
+        }
+        
+       
+    </script>
+</body>
+</html>

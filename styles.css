@@ -1,0 +1,330 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+	@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url('https://lostandfoundnetworks.com/storage/app/logo/body-background-61104203485c1.jpeg');
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+}
+
+.post-container {
+   
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    margin: 0 auto;
+    margin-top: 20px;
+    
+    background-color: #fff;
+}
+
+
+.post-container {
+    padding-left: 10px;
+}
+
+.title {
+    text-align: left;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    margin: 0;
+    padding-bottom: 2px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+
+
+.image-slider {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.details-box {
+    border: 2px solid #000;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.details-tab {
+    text-align: left;
+}
+
+.details-tab h2 {
+    width: 3cm;
+		/* This is not a standard CSS unit, so I assume you meant 3px/5px */
+		height: 1cm;
+		/* Set an appropriate height for the box */
+		background-color: #405cf5;
+		border-radius: 6px;
+		text-align: center;
+		/* Center the text horizontally */
+		line-height: 40px;
+		/* Center the text vertically within the box */
+		font-size: 1rem;
+		color: #fff;
+		font-weight: 600;
+		margin-bottom: 10px;
+}
+
+.details-tab h2:hover {
+    background-color: #0056b3;
+}
+
+.ad-details {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.detail {
+    flex-basis: 48%;
+    background-color: rgb(255, 225, 0);
+    padding: 1px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.detail-1 {
+    flex-basis: 48%;
+    padding: 3px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.additional-details-box {
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.additional-details-box h3 {
+    margin-top: 0;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.detail-box {
+
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: rgb(255, 225, 0);
+}
+
+.detail:hover {
+    color: #fff;
+}
+
+.tags {
+    text-align: start;
+    padding-left: 2px;
+    font-size: x-small;
+}
+
+.my-card-right {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    width: 250px;
+    padding: 20px;
+}
+
+.user-card {
+    flex-basis: 30%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.profile-picture {
+    max-width: 100%;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.user-name {
+    font-size: 20px;
+    color: #007BFF;
+    margin: 0;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+}
+
+.contact-details {
+    font-size: 14px;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.label {
+    flex-basis: 30%;
+    text-align: start;
+}
+
+.value {
+    flex-basis: 70%;
+    text-align: right;
+}
+
+.profile-text {
+    text-align: center;
+}
+
+.user-info {
+    font-size: 14px;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.location-card {
+    margin-top: 25px;
+    position: absolute;
+    top: 20px;
+    width: 250px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.location-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.value {
+    text-align: start;
+}
+
+.location-card h3 {
+    text-align: start;
+    color: black;
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .my-card-right,
+    .location-card {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .my-card-right {
+        margin-top: 20px;
+    }
+}
+
+/* Media Query for Medium-sized Screens (e.g., tablets) */
+@media screen and (max-width: 768px) {
+    .my-card-right,
+    .location-card {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .my-card-right {
+        margin-top: 20px;
+    }
+}
+
+
+.container {
+    width: 30rem;
+    height: 20rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .pic-container {
+    height: inherit;
+    width: inherit;
+  }
+  
+  .pic-container,
+  .pic,
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .pic {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    
+    transition: all 500ms cubic-bezier(.42, .84, 0, 1.06);
+  }
+  
+  .pic__img {
+    width:90%;
+    height: 90%;
+    object-fit: cover;
+  }
+  
+  .slider-btns {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+  
+  .btn-left,
+  .btn-right {
+    cursor: pointer;
+    background-color: #405cf5;
+    border-radius: 60px;
+    color: #ffffff;
+    opacity: 100%;
+    border: none;
+    font-size: 2rem;
+    font-weight: 700;
+    z-index: 20;
+  }
+  
+  .btn-left:hover,
+  .btn-right:hover{
+    transform: scale(1.4);
+    opacity:100%;
+  }

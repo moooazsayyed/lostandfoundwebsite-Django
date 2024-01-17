@@ -1,0 +1,724 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lost and Found</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <!-- Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Bootstrap JavaScript -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <script src="https://kit.fontawesome.com/1144a62fa6.js" crossorigin="anonymous"></script>
+
+  <nav class="second-navbar">
+    <div class="category-dropdown">
+      <div class="dropdown">
+        <!-- Button to trigger dropdown menu -->
+        <button class="category-button dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Category
+        </button>
+        <!-- Dropdown menu items -->
+        <div class="dropdown-menu" aria-labelledby="categoryDropdown">
+          <a class="dropdown-item" href="#" value="date">People</a>
+          <a class="dropdown-item" href="#" value="popularity">Pets</a>
+          <a class="dropdown-item" href="#" value="price">Mobiles</a>
+        </div>
+      </div>
+    </div>
+    <button class="what-button">What ?</button>
+    <button class="where-button">Where ?</button>
+    <button class="find-button">
+      <i class="fa-solid fa-magnifying-glass" style="color: #ffffff"></i> Find
+    </button>
+  </nav>
+  <!-- Sidebar Container -->
+  <div class="sidebar-container">
+    <!-- Floating Sidebar -->
+    <div class="floating-sidebar">
+      <div class="sidebar">
+        <div class="sidebar-section">
+          <h3>Location</h3>
+          <ul>
+            <a href="?loc=Mumbai">
+              <li>Mumbai</li>
+            </a><a href="?loc=Banglore">
+              <li>Banglore</li>
+            </a><a href="?loc=Delhi">
+              <li>Delhi</li>
+            </a><a href="?loc=Pune">
+              <li>Pune</li>
+            </a>
+          </ul>
+        </div>
+        <hr size="4" color="black" />
+        <br />
+        <div class="sidebar-section">
+          <h3>Category</h3>
+          <ul>
+            <a href="?loc=Mobile">
+              <li>Mobile</li>
+            </a><a href="?loc=Tablet">
+              <li>Tablet</li>
+            </a><a href="?loc=Dog">
+              <li>Dog</li>
+            </a><a href="?loc=Cat">
+              <li>Cat</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Content -->
+    <div class="content">
+      <div class="title">
+        <div class="left">
+          <button class="title-button">All Ads</button>
+          <button class="title-button">Lost</button>
+          <button class="title-button">Found</button>
+        </div>
+        <div class="right">
+          <select class="sort-by">
+            <option value="date">Sort by Date</option>
+            <option value="popularity">Sort by Popularity</option>
+            <option value="price">Sort by Price</option>
+          </select>
+        </div>
+      </div>
+      <div class="below-title">
+        <p>All Ads</p>
+        <div class="img-buttons">
+          <button class="img-button">
+            <img src="C:\Users\sahan\OneDrive\Desktop\lost&found\mysite\img1.jpg" alt="" />
+          </button>
+          <button class="img-button">
+            <img src="C:\users\hp\Downloads\ashraf-main\ashraf-main\img\list-text.png" alt="" />
+          </button>
+          <button class="img-button">
+            <img src="C:\users\hp\Downloads\ashraf-main\ashraf-main\img\layout.png" alt="img" />
+          </button>
+        </div>
+      </div>
+      <!-- main content cards*/ -->
+      <div class="grid-container">
+{% for listing_people in listing_peoples %}
+	<div class="card">
+		<a href="/view?id={{listing_people.id}}">
+			<div class="image-container">
+				<img src="{{ listing_people.image.url }}" alt="Your Image">
+				<div class="image-overlay"></div>
+			</div>
+		</a>
+		<div class="card-content">
+			<h4>{{ listing_people.title }}</h4>
+			<p>{{ listing_people.description}}</p>
+			<div class="box">Lost</div>
+		</div>
+	</div>
+	{% endfor %}
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <script src="main.js"></script>
+  <div class="footer">
+    <div class="footer-left">
+      <div class="column">
+        <!-- Left Column Content -->
+        <p>About Us</p>
+        <ul>
+          <a href="#">
+            <li>Url 1</li>
+          </a><a href="#">
+            <li>Url 2</li>
+          </a><a href="#">
+            <li>Url 3</li>
+          </a>
+        </ul>
+      </div>
+      <div class="column">
+        <!-- Middle Column Content -->
+        <p>CONTACT & SITEMAP</p>
+        <ul>
+          <a href="#">
+            <li>Url 1</li>
+          </a><a href="#">
+            <li>Url 2</li>
+          </a><a href="#">
+            <li>Url 3</li>
+          </a>
+        </ul>
+      </div>
+      <div class="column">
+        <!-- Right Column Content -->
+        <p>MY ACCOUNT</p>
+        <ul>
+          <a href="#">
+            <li>Login</li>
+          </a><a href="#">
+            <li>Register</li>
+          </a>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-right">
+      <div class="apps-download">
+        <a href="https://www.example.com">
+          <button class="app-store-button">
+            <i class="fa-brands fa-apple"></i> Download on the
+            <span>App Store</span>
+          </button>
+        </a>
+        <a href="#">
+          <button class="play-store-button">
+            <i class="fa-brands fa-android"></i> Get it on
+            <span>Play Store</span>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply styles to the body */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Additional styles for the new navbar */
+.second-navbar {
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #405cf5;
+    /* Black background */
+    margin-top: 20px;
+    /* Space between the two navbars */
+    padding: 20px;
+}
+
+.second-navbar button {
+    flex: 1;
+    /* Equal distribution */
+    margin: 0 5px;
+    /* Adjust spacing between buttons */
+}
+
+.category-button,
+.what-button,
+.where-button,
+.find-button {
+    font-size: 15px;
+    flex: 1;
+    /* Equal distribution */
+    background-color: white;
+    /* Black background */
+    border: 1px solid black;
+    /* White border */
+    color: #ffffff;
+    /* White text */
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.category-button {
+    position: relative;
+    color: black;
+}
+
+.category-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    /* Black background */
+    max-width: 120px;
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
+    /* Adjust shadow color */
+    z-index: 1;
+}
+
+.category-dropdown-content a {
+    color: white;
+    /* White text */
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+}
+a {
+text-decoration: none;
+}
+.category-button:hover .category-dropdown-content {
+    display: block;
+}
+
+/* Sidebar */
+.sidebar-container {
+    margin: 5%;
+    margin-top: 20px;
+    display: flex;
+    /* border: 2px solid #000000; */
+}
+
+.floating-sidebar {
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    padding: 10px;
+}
+
+.sidebar h3 {
+    color: #333;
+}
+
+.sidebar-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-section li {
+    padding: 10px;
+    color: #333;
+    cursor: pointer;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title h2 {
+    margin: 0;
+}
+
+.left,
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.sort-by {
+    padding: 8px;
+    font-size: 14px;
+}
+.category-list {
+    background: #fff;
+    border-radius: 3px 3px;
+    display: block;
+    box-shadow: 0 1px 1px rgba(180, 180, 180, .5)
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    /* Adjust height as needed */
+    gap: 20px;
+    background-color: #fff;
+
+}
+
+.grid-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Add hover effect if desired */
+.grid-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add hover effect if desired */
+.grid-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title-button {
+    background-color: #332211;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.title-button:hover {
+    background-color: #555;
+}
+
+.below-title {
+    display: flex;
+    justify-content: space-between;
+    /* Distribute items along the main axis */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.below-title p {
+    margin: 0;
+}
+
+/*  */
+.img-buttons {
+    display: flex;
+}
+
+.img-button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-left: 10px;
+    /* Add margin between images */
+}
+
+.img-button img {
+    width: 20px;
+    height: 20px;
+}
+
+/*  */
+.grid-item {
+    background-color: #e7dada;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    height: auto;
+    /* Set the height to auto */
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.image-count {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.caption {
+    margin-top: 10%;
+    text-align: left;
+    margin-bottom: 3px;
+}
+
+.logo img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 10px;
+    /* Adjust margin as needed */
+}
+
+.time {
+    font-size: 14px;
+    /* Adjust font size as needed */
+}
+
+.time {
+    font-size: 12px;
+    color: #777;
+}
+
+.categories,
+.location {
+    margin-top: 10px;
+}
+
+.categories a,
+.location a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.category-button {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* background-color: #ffffff; */
+}
+
+.location i {
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.cate-loca {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.details {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+/*  */
+.heart-button {
+    background: none;
+    padding: 5px 35px;
+    margin: 10% 0%;
+    position: relative;
+}
+
+/*  */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    /* Set height to auto */
+    gap: 20px;
+}
+
+.grid-item {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    height: 100%;
+    width: 6cm;
+    /* Set height to 100% */
+}
+
+.grid-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.267);
+}
+
+/* Add background color to the container */
+.grid-item-container {
+    background-color: #e7dada;
+}
+
+/* Rest of your CSS remains the same */
+.footer {
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    margin-top: 20px;
+}
+
+.footer-left {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.footer a {
+    color: #ffffff;
+    /* Link color */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+.column {
+    flex: 1;
+    text-align: center;
+}
+
+.column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.column ul li {
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+.apps-download {
+    display: flex;
+}
+
+.app-store-button,
+.play-store-button {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.app-store-button span,
+.play-store-button span {
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.app-store-button i,
+.play-store-button i {
+    font-size: 16px;
+}
+
+.app-store-button:hover,
+.play-store-button:hover {
+    background-color: rgb(236, 0, 0);   
+}
+
+.navbar,
+.second-navbar,
+.grid-item-container,
+.category-button,
+.what-button,
+.where-button,
+.find-button,
+.footer,
+.title-button
+.column ul li{
+background-color: #405cf5;
+}
+.what-button,
+.where-button,
+.find-button{
+    color: black;
+    background-color: white;
+
+}
+.grid-item,
+.language-button,
+.img-button {
+    background-color: #f0f0f0;
+}
+
+.download-app,
+.login,
+.register,
+.add-listing
+{
+    background-color: blue;
+}
+
+/*card*/
+.box {
+    width: 2cm; /* This is not a standard CSS unit, so I assume you meant 3px/5px */
+    height: 0.8cm; /* Set an appropriate height for the box */
+    background-color: #405cf5;
+    border-radius: 6px;
+    text-align: center; /* Center the text horizontally */
+    line-height: 30px; /* Center the text vertically within the box */
+    font-size: 0.8rem;
+    color:#fff;
+    font-weight: 600;
+
+
+}
+
+.card {
+    width: calc(100% - 0px);
+    max-height: 12cm;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    margin-top: 20px;
+    background-image: linear-gradient(#F7F8F8);
+    background: rgba(255, 255, 255);
+    font-family: "Poppins", sans-serif;
+
+}
+
+
+/* Styling for card image */
+.card img {
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+
+/* Styling for card content */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h4 {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.card-content p {
+    font-size: 0.7rem;
+    padding-top: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* Increase the size of the card on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add a shadow on hover */
+}
+  </style>
+</body>
+
+</html>

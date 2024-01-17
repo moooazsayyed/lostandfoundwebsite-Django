@@ -1,0 +1,91 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Dosis', sans-serif;
+        }
+        header {
+            background-color: #fff;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .logo img {
+            width: 50px;
+            height: auto;
+            margin-left: 20px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        /* Dropdown button */
+        .dropdown-button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 160px;
+            height: 50px;
+            margin-right: 17cm;
+        }
+
+        /* Dropdown content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-top: 20px;
+        }
+
+        /* Dropdown content items */
+        .dropdown-item {
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+        }
+        .dropdown-item img{
+            height: 20px;
+            width: 30px;
+        }
+
+        /* Dropdown item text */
+        .dropdown-text {
+            margin-left: 10px;
+            color: #333;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            margin-right : 60px;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            white-space: nowrap;
+        }

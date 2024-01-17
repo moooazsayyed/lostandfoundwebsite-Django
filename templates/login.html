@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% block  body%}
+<div class="login-container">
+    <h2>Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="pass" required>
+        </div>
+        <button class="button-9" type="submit">Login</button>
+    </form>
+    <p class="register">Don't have an account? <a href="{% url 'Register' %}">Register</a></p>
+</div>
+<style>
+    /* Add your previous CSS styles here */
+body{
+    background-image: url('https://lostandfoundnetworks.com/storage/app/logo/header-6110410b718d3.jpeg');
+    background-size: cover; /* Adjust to your preference */
+    background-repeat: no-repeat; /* Adjust to your preference */
+    background-attachment: fixed; /* Adjust to your preference */
+}
+.login-container {
+    max-width: 400px;
+    margin: 2cm auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 95%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.button-9 {
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #405cf5;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 100%;
+    height: 44px;
+    line-height: 1.15;
+    margin: 12px 0 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s,box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+}
+
+.button-9:disabled {
+    cursor: default;
+}
+
+.button-9:focus {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+.register {
+    font-size: 1rem;
+    margin-top: 20px;
+    color: #555;
+    text-align: center;
+}
+
+.register{
+    text-decoration: none;
+    color: #405cf5;
+    font-weight: bold;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
+
+
+</style>
+{% endblock %}

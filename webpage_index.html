@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Pet Details</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+</head>
+
+<body>
+    <div class="background-image"></div>
+    <!-- <div class="container"> -->
+    <center>
+        <div class="post-container">
+
+            <h1 class="title">Lost my persian cat please help me to find him</h1>
+            <hr>
+            <div class="content-container">
+                <div class="content-container">
+
+                    <div class="container">
+                        <div class="pic-container">
+                          <div class="pic pic-1">
+                            <img class="pic__img"     src='https://images.unsplash.com/photo-1681066471074-d45c49154f44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE0OTcxOTQ&ixlib=rb-4.0.3&q=80&w=400' alt=''>
+                          </div>
+                          <div class="pic pic-2">
+                            <img class="pic__img" src='https://images.unsplash.com/photo-1680631757284-617846a5ef29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE0OTcxNTU&ixlib=rb-4.0.3&q=80&w=400' alt=''>
+                          </div>
+                          <div class="pic pic-3">
+                            <img class="pic__img" src='https://plus.unsplash.com/premium_photo-1669951581968-73b5b71face3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE0OTcyNjE&ixlib=rb-4.0.3&q=80&w=400' alt=''>
+                          </div>
+                          <div class="pic pic-4">
+                            <img class="pic__img" src='https://plus.unsplash.com/premium_photo-1676734032797-21789f57978a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE0OTcxOTQ&ixlib=rb-4.0.3&q=80&w=400' alt=''>
+                          </div>
+                          <div class="pic pic-5">
+                            <img class="pic__img" src='https://images.unsplash.com/photo-1678789604985-18d290d56fe0?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODE0OTcyNjE&ixlib=rb-4.0.3&q=85&w=400' alt=''>  
+                          </div>
+                        </div>
+                      </div>
+                      <div class='slider-btns'>
+                        <button class="btn-left"><</button>
+                        <button class="btn-right">></button>
+                      </div>
+                    <hr>
+                    <div class="details-tab">
+                        <h2 class="highlight-on-hover">Ad Details</h2>
+                    </div>
+
+                    <div class="details-box">
+                        <p><strong>Description:</strong> Persian brown cat. Very beautiful. Lost in Vasundhara area. plese help me to find her and contact 8909098989 lat i saw her on pune mumbai highway</p>
+                    </div>
+
+                    <div class="additional-details-box">
+                        <h3>Additional Details</h3>
+                        <div class="detail-row">
+                            <div class="detail">
+                                <p><strong>State</strong>Maharashtra</p>
+                            </div>
+                            <div class="detail">
+                                <p><strong>Reward</strong>None</p>
+                            </div>
+                            <!-- Add more details here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tags">
+                <p>T&C* all the detail are changed and updated by the customer end we dont know if the information given is true or not</p>
+            </div>
+        </div>
+    </center>
+    </div>
+    <div class="my-card-right">
+        <div class="user-card">
+            <div class="profile-text">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                    alt="Profile Picture" class="profile-picture">
+                <h3 class="user-name">Ad by name</h3>
+            </div>
+            <div class="contact-details">
+                <div class="contact-row">
+                    <p class="label"><strong>Name:</strong></p>
+                    <p class="value">John Doe</p>
+                </div>
+                <div class="contact-row">
+                    <p class="label"><strong>Email</strong></p>
+                    <p class="value">john@example.com</p>
+                </div>
+                <div class="contact-row">
+                    <p class="label"><strong>Phone</strong></p>
+                    <p class="value">+1234567890</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    const slides= document.querySelectorAll('.pic');
+const btnRight = document.querySelector('.btn-right');
+const btnLeft = document.querySelector('.btn-left');
+
+let curSlide = 0;
+const maxSlide = slides.length;
+
+const goToSlide = function (slide) {
+  slides.forEach(function (s, i) {
+    const translateXNum = 80 * (i - slide);
+    let translateYNum, rotateDeg, grayscaleNum, zIndexNum, opacityNum;
+    if (translateXNum === 0){
+      translateYNum = 0; 
+      rotateDeg = 0;
+      grayscaleNum = 0;
+      zIndexNum = 1;
+      opacityNum = 100;
+    } else if (translateXNum < 0) {
+      translateYNum = 5;
+      rotateDeg = -5;
+      grayscaleNum = 1;
+      zIndexNum = 0;
+      opacityNum = 20;
+      } else {
+      translateYNum = 5;
+      rotateDeg = 5;
+      grayscaleNum = 1;
+      zIndexNum = 0;
+      opacityNum = 20;
+      }      
+s.style.transform = `translate(${translateXNum}%, ${translateYNum}%) rotate(${rotateDeg}deg)`;
+s.style.filter = `grayscale(${grayscaleNum})`;
+s.style.zIndex = zIndexNum;
+s.style.opacity = `${opacityNum}%`
+  });
+};
+goToSlide(0);
+
+const nextSlide = function(){
+  if(curSlide === maxSlide-1) {
+    curSlide=0;
+  } else {
+    curSlide++;
+  }
+ goToSlide(curSlide);
+}
+
+const prevSlide = function (){
+ if (curSlide === 0){
+   curSlide = maxSlide-1
+ } else {
+ curSlide--;
+ }
+ goToSlide(curSlide);
+}
+
+
+btnRight.addEventListener('click', nextSlide)
+btnLeft.addEventListener('click', prevSlide)
+</script>
+</body>
+
+</html>

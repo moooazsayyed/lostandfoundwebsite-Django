@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% block  body%}
+
+<div class="register-container">
+    <h2>Register</h2>
+    <form action='' method="post" >
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password1">Password</label>
+            <input type="password" id="password1" name="password1" required>
+        </div>
+        <div class="form-group">
+            <label for="password2">Confirm Password</label>
+            <input type="password" id="password2" name="password2" required>
+        </div>
+        <button class="button-9" type="submit">Register</button>
+    </form>
+    <p class="login-link">Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+</div>
+
+<style>
+    /* Add your previous CSS styles here */
+body{
+    background-image: url('https://lostandfoundnetworks.com/storage/app/logo/body-background-61104203485c1.jpeg');
+    background-size: cover; /* Adjust to your preference */
+    background-repeat: no-repeat; /* Adjust to your preference */
+    background-attachment: fixed; /* Adjust to your preference */
+}
+
+.register-container {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2cm auto;
+}
+
+.register-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 95%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button-9 {
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #405cf5;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 100%;
+    height: 44px;
+    line-height: 1.15;
+    margin: 12px 0 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s,box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+}
+
+.button-9:disabled {
+    cursor: default;
+}
+
+.button-9:focus {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+
+.login-link {
+    font-size: 1rem;
+    margin-top: 20px;
+    color: #555;
+    text-align: center;
+}
+
+.login-link a {
+    text-decoration: none;
+    color: #405cf5;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+</style>
+
+<script>
+    function checkPasswords() {
+        var pass1 = document.getElementById('password1').value;
+        var pass2 = document.getElementById('password2').value;
+    
+        console.log("Password check function is called");
+    
+        if (pass1 !== pass2) {
+            alert("Passwords do not match");
+            return false; // Prevent form submission
+        }
+        return true; // Allow form submission
+    }
+    </script>
+{% endblock %}

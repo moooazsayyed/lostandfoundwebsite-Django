@@ -1,0 +1,937 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<nav class="second-navbar">
+    <div class="category-dropdown">
+      <button class="category-button">Category</button>
+      <div class="category-dropdown-content">
+        <a href="#">Mobiles</a>
+        <a href="#">Tablets</a>
+        <a href="#">Dog</a>
+        <a href="#">Cat</a>
+      </div>
+    </div>
+    <button class="what-button">What ?</button>
+    <button class="where-button">Where ?</button>
+    <button class="find-button">
+      <i class="fa-solid fa-magnifying-glass" style="color: #ffffff"></i> Find
+    </button>
+  </nav>
+  <!-- Sidebar Container -->
+  <div class="sidebar-container">
+    <!-- Floating Sidebar -->
+    <div class="floating-sidebar">
+      <div class="sidebar">
+        <div class="sidebar-section">
+          <h3>Location</h3>
+          <ul>
+            <a href="?loc=Mumbai"><li>Mumbai</li></a
+            ><a href="?loc=Banglore"> <li>Banglore</li></a
+            ><a href="?loc=Delhi"> <li>Delhi</li></a
+            ><a href="?loc=Pune"> <li>Pune</li></a>
+          </ul>
+        </div>
+        <hr size="4" color="black" />
+        <br />
+        <div class="sidebar-section">
+          <h3>Category</h3>
+          <ul>
+            <a href="?loc=Mobile"><li>Mobile</li></a
+            ><a href="?loc=Tablet"> <li>Tablet</li></a
+            ><a href="?loc=Dog"> <li>Dog</li></a
+            ><a href="?loc=Cat"> <li>Cat</li></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Content -->
+    <div class="content">
+      <div class="title">
+        <div class="left">
+          <button class="title-button">All Ads</button>
+          <button class="title-button">Lost</button>
+          <button class="title-button">Found</button>
+        </div>
+        <div class="right">
+          <select class="sort-by">
+            <option value="date">Sort by Date</option>
+            <option value="popularity">Sort by Popularity</option>
+            <option value="price">Sort by Price</option>
+          </select>
+        </div>
+      </div>
+      <div class="below-title">
+        <p>All Ads</p>
+        <div class="img-buttons">
+          <button class="img-button">
+            <img src="https://lostandfoundnetworks.com/storage/files/in/1539/thumb-816x460-d60956c90a06e609f0e48f97fa1f27d5.jpeg" alt="" />
+          </button>
+          <button class="img-button">
+            <img src="/img/list-text.png" alt="" />
+          </button>
+          <button class="img-button">
+            <img src="/img/layout.png" alt="" />
+          </button>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-item-container">
+          <div class="grid-item">
+            <div class="image">
+              <img src="https://lostandfoundnetworks.com/storage/files/in/1539/thumb-816x460-d60956c90a06e609f0e48f97fa1f27d5.jpeg" alt="Image Alt Text" />
+            </div>
+            <div class="caption">
+              <p>
+                I lost my logo today in the park, somebody pls give me back
+              </p>
+            </div>
+            <div class="details">
+              <div class="logo">
+                <img src="https://lostandfoundnetworks.com/storage/files/in/1539/thumb-816x460-d60956c90a06e609f0e48f97fa1f27d5.jpeg" alt="Lost" />
+              </div>
+              <div class="time"><p>one month ago</p></div>
+            </div>
+            <div class="cate-loca">
+              <div class="categories"><a href="#">Pets</a></div>
+              <div class="location">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-location-dot"
+                    style="color: #000000"
+                  ></i>
+                  Mumbai</a
+                >
+              </div>
+            </div>
+
+            <div class="heart-icon">
+              <button class="heart-button">
+                <div class="save-text-box heart-value">
+                  <i class="far fa-heart"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item-container">
+          <div class="grid-item">
+            <div class="image">
+              <img src="/img/layout.png" alt="Image Alt Text" />
+            </div>
+            <div class="caption">
+              <p>
+                I lost my logo today in the park, somebody pls give me back
+              </p>
+            </div>
+            <div class="details">
+              <div class="logo">
+                <img src="/img/list-text.png" alt="Lost" />
+              </div>
+              <div class="time"><p>one month ago</p></div>
+            </div>
+            <div class="cate-loca">
+              <div class="categories"><a href="#">Pets</a></div>
+              <div class="location">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-location-dot"
+                    style="color: #000000"
+                  ></i>
+                  Mumbai</a
+                >
+              </div>
+            </div>
+
+            <div class="heart-icon">
+              <button class="heart-button">
+                <div class="save-text-box heart-value">
+                  <i class="far fa-heart"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item-container">
+          <div class="grid-item">
+            <div class="image">
+              <img src="/img/layout.png" alt="Image Alt Text" />
+            </div>
+            <div class="caption">
+              <p>
+                I lost my logo today in the park, somebody pls give me back
+              </p>
+            </div>
+            <div class="details">
+              <div class="logo">
+                <img src="/img/list-text.png" alt="Lost" />
+              </div>
+              <div class="time"><p>one month ago</p></div>
+            </div>
+            <div class="cate-loca">
+              <div class="categories"><a href="#">Pets</a></div>
+              <div class="location">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-location-dot"
+                    style="color: #000000"
+                  ></i>
+                  Mumbai</a
+                >
+              </div>
+            </div>
+
+            <div class="heart-icon">
+              <button class="heart-button">
+                <div class="save-text-box heart-value">
+                  <i class="far fa-heart"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item-container">
+          <div class="grid-item">
+            <div class="image">
+              <img src="/img/layout.png" alt="Image Alt Text" />
+            </div>
+            <div class="caption">
+              <p>
+                I lost my logo today in the park, somebody pls give me back
+              </p>
+            </div>
+            <div class="details">
+              <div class="logo">
+                <img src="/img/list-text.png" alt="Lost" />
+              </div>
+              <div class="time"><p>one month ago</p></div>
+            </div>
+            <div class="cate-loca">
+              <div class="categories"><a href="#">Pets</a></div>
+              <div class="location">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-location-dot"
+                    style="color: #000000"
+                  ></i>
+                  Mumbai</a
+                >
+              </div>
+            </div>
+
+            <div class="heart-icon">
+              <button class="heart-button">
+                <div class="save-text-box heart-value">
+                  <i class="far fa-heart"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item-container">
+          <div class="grid-item">
+            <div class="image">
+              <img src="/img/layout.png" alt="Image Alt Text" />
+            </div>
+            <div class="caption">
+              <p>
+                I lost my logo today in the park, somebody pls give me back
+              </p>
+            </div>
+            <div class="details">
+              <div class="logo">
+                <img src="/img/list-text.png" alt="Lost" />
+              </div>
+              <div class="time"><p>one month ago</p></div>
+            </div>
+            <div class="cate-loca">
+              <div class="categories"><a href="#">Pets</a></div>
+              <div class="location">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-location-dot"
+                    style="color: #000000"
+                  ></i>
+                  Mumbai</a
+                >
+              </div>
+            </div>
+
+            <div class="heart-icon">
+              <button class="heart-button">
+                <div class="save-text-box heart-value">
+                  <i class="far fa-heart"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item-container">
+          <div class="grid-item">
+            <div class="image">
+              <img src="/img/layout.png" alt="Image Alt Text" />
+            </div>
+            <div class="caption">
+              <p>
+                I lost my logo today in the park, somebody pls give me back
+              </p>
+            </div>
+            <div class="details">
+              <div class="logo">
+                <img src="/img/list-text.png" alt="Lost" />
+              </div>
+              <div class="time"><p>one month ago</p></div>
+            </div>
+            <div class="cate-loca">
+              <div class="categories"><a href="#">Pets</a></div>
+              <div class="location">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-location-dot"
+                    style="color: #000000"
+                  ></i>
+                  Mumbai</a
+                >
+              </div>
+            </div>
+
+            <div class="heart-icon">
+              <button class="heart-button">
+                <div class="save-text-box heart-value">
+                  <i class="far fa-heart"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item-container">
+          <div class="grid-item">
+            <div class="image">
+              <img src="/img/layout.png" alt="Image Alt Text" />
+            </div>
+            <div class="caption">
+              <p>
+                I lost my logo today in the park, somebody pls give me back
+              </p>
+            </div>
+            <div class="details">
+              <div class="logo">
+                <img src="/img/list-text.png" alt="Lost" />
+              </div>
+              <div class="time"><p>one month ago</p></div>
+            </div>
+            <div class="cate-loca">
+              <div class="categories"><a href="#">Pets</a></div>
+              <div class="location">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-location-dot"
+                    style="color: #000000"
+                  ></i>
+                  Mumbai</a
+                >
+              </div>
+            </div>
+
+            <div class="heart-icon">
+              <button class="heart-button">
+                <div class="save-text-box heart-value">
+                  <i class="far fa-heart"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item-container">
+          <div class="grid-item">
+            <div class="image">
+              <img src="/img/layout.png" alt="Image Alt Text" />
+            </div>
+            <div class="caption">
+              <p>
+                I lost my logo today in the park, somebody pls give me back
+              </p>
+            </div>
+            <div class="details">
+              <div class="logo">
+                <img src="/img/list-text.png" alt="Lost" />
+              </div>
+              <div class="time"><p>one month ago</p></div>
+            </div>
+            <div class="cate-loca">
+              <div class="categories"><a href="#">Pets</a></div>
+              <div class="location">
+                <a href="#"
+                  ><i
+                    class="fa-solid fa-location-dot"
+                    style="color: #000000"
+                  ></i>
+                  Mumbai</a
+                >
+              </div>
+            </div>
+
+            <div class="heart-icon">
+              <button class="heart-button">
+                <div class="save-text-box heart-value">
+                  <i class="far fa-heart"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* Reset some default styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Apply styles to the body */
+    body {
+        font-family: Arial, sans-serif;
+    }
+    
+    /* Style the navbar */
+    .navbar {
+        background-color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Style the navbar-left section */
+    .navbar-left {
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff;
+        margin-right: 20px;
+    }
+    
+    /* Style the navbar-right section */
+    .navbar-right {
+        display: flex;
+        align-items: center;
+    }
+    
+    .download-app {
+        background-color: #000000;
+        color: #ffffff;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    
+    .language-dropdown {
+        position: relative;
+        margin-right: 10px;
+    }
+    
+    .language-button {
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        color: #000000;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+    }
+    
+    .language-button::after {
+        content: '▼';
+        /* Unicode for the caret-down icon */
+        font-family: 'Font Awesome 6 Free';
+        margin-left: 5px;
+    }
+    
+    .language-dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        min-width: 120px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+    
+    .language-dropdown-content a {
+        color: #000000;
+        padding: 8px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .language-dropdown:hover .language-dropdown-content {
+        display: block;
+    }
+    
+    /* Style the buttons with icons */
+    button i.fa {
+        margin-right: 5px;
+    }
+    
+    .fa-brands {
+        padding: 0 15px;
+    }
+    
+    .login,
+    .register,
+    .add-listing {
+        background-color: #000000;
+        color: #ffffff;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    
+    /* Additional styles for the new navbar */
+    
+    .second-navbar {
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        border: 2px solid #000000;
+        /* Colored border (black) */
+        background-color: #000000;
+        /* Black background */
+        margin-top: 20px;
+        /* Space between the two navbars */
+        padding: 20px;
+    }
+    
+    .second-navbar button {
+        flex: 1;
+        /* Equal distribution */
+        margin: 0 5px;
+        /* Adjust spacing between buttons */
+    }
+    
+    .category-button,
+    .what-button,
+    .where-button,
+    .find-button {
+        font-size: 15px;
+        flex: 1;
+        /* Equal distribution */
+        background-color: #000000;
+        /* Black background */
+        border: 1px solid #ffffff;
+        /* White border */
+        color: #ffffff;
+        /* White text */
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    .category-button {
+        position: relative;
+    }
+    
+    .category-dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #000000;
+        /* Black background */
+        max-width: 120px;
+        box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
+        /* Adjust shadow color */
+        z-index: 1;
+    }
+    
+    .category-dropdown-content a {
+        color: #ffffff;
+        /* White text */
+        padding: 8px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .category-button:hover .category-dropdown-content {
+        display: block;
+    }
+    
+    /* Sidebar */
+    .sidebar-container {
+        margin: 10%;
+        margin-top: 20px;
+        display: flex;
+        /* border: 2px solid #000000; */
+    }
+    
+    .floating-sidebar {
+        width: 250px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .sidebar {
+        padding: 10px;
+    }
+    
+    .sidebar h3 {
+        color: #333;
+    }
+    
+    .sidebar-section ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .sidebar-section li {
+        padding: 10px;
+        color: #333;
+        cursor: pointer;
+    }
+    
+    .content {
+        flex-grow: 1;
+        padding: 20px;
+    }
+    
+    .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    .title h2 {
+        margin: 0;
+    }
+    
+    .left,
+    .right {
+        display: flex;
+        align-items: center;
+    }
+    
+    .sort-by {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 100px);
+        /* Adjust height as needed */
+        gap: 20px;
+    }
+    
+    .grid-item {
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    
+    /* Add hover effect if desired */
+    .grid-item:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Add hover effect if desired */
+    .grid-item:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .title-button {
+        background-color: #332211;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-right: 10px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    
+    .title-button:hover {
+        background-color: #555;
+    }
+    
+    .below-title {
+        display: flex;
+        justify-content: space-between;
+        /* Distribute items along the main axis */
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    .below-title p {
+        margin: 0;
+    }
+    
+    /*  */
+    .img-buttons {
+        display: flex;
+    }
+    
+    .img-button {
+        background: none;
+        border: none;
+        padding: 0;
+        margin-left: 10px;
+        /* Add margin between images */
+    }
+    
+    .img-button img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /*  */
+    .grid-item {
+        background-color: #e7dada;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        position: relative;
+        height: auto;
+        /* Set the height to auto */
+    }
+    
+    .image img {
+        max-width: 60%;
+        height: auto;
+        border-radius: 5px;
+    }
+    
+    .image-count {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #ffffff;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 12px;
+    }
+    
+    .caption {
+        margin-top: 10%;
+    }
+    
+    .logo img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+    
+    .details {
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo {
+        margin-right: 10px;
+        /* Adjust margin as needed */
+    }
+    
+    .time {
+        font-size: 14px;
+        /* Adjust font size as needed */
+    }
+    
+    .time {
+        font-size: 12px;
+        color: #777;
+    }
+    
+    .categories,
+    .location {
+        margin-top: 10px;
+    }
+    
+    .categories a,
+    .location a {
+        text-decoration: none;
+        color: #000000;
+    }
+    
+    .category-button {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 5px;
+        /* background-color: #ffffff; */
+    }
+    
+    .location i {
+        font-size: 12px;
+        vertical-align: middle;
+    }
+    
+    .cate-loca {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .details {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    /*  */
+    .heart-button {
+        background: none;
+        padding: 5px 35px;
+        margin: 10% 0%;
+        position: relative;
+    }
+    
+    /*  */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, auto);
+        /* Set height to auto */
+        gap: 20px;
+    }
+    
+    .grid-item {
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        position: relative;
+        height: 100%;
+        /* Set height to 100% */
+    }
+    
+    .grid-item:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.267);
+    }
+    
+    /* Add background color to the container */
+    .grid-item-container {
+        background-color: #e7dada;
+    }
+    
+    /* Rest of your CSS remains the same */
+    .footer {
+        display: flex;
+        color: #fff;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #f0f0f0;
+        margin-top: 20px;
+    }
+    
+    .footer-left {
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+    }
+    
+    .footer a {
+        color: #ffffff;
+        /* Link color */
+        text-decoration: none;
+        /* Remove underline */
+    }
+    
+    .footer a:hover {
+        text-decoration: underline;
+        /* Underline on hover */
+    }
+    
+    .column {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .column ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .column ul li {
+        margin: 5px 0;
+        font-size: 15px;
+    }
+    
+    .apps-download {
+        display: flex;
+    }
+    
+    .app-store-button,
+    .play-store-button {
+        display: flex;
+        align-items: center;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 12px;
+    }
+    
+    .app-store-button span,
+    .play-store-button span {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+    
+    .app-store-button i,
+    .play-store-button i {
+        font-size: 16px;
+    }
+    
+    .app-store-button:hover,
+    .play-store-button:hover {
+        background-color: rgb(236, 0, 0);   
+    }
+    
+    .navbar,
+    .second-navbar,
+    .grid-item-container,
+    .category-button,
+    .what-button,
+    .where-button,
+    .find-button,
+    .footer,
+    .title-button
+    .column ul li{
+        background-color: #332211;
+    }
+    
+    .grid-item,
+    .language-button,
+    .img-button {
+        background-color: #f0f0f0;
+    }
+    
+    .download-app,
+    .login,
+    .register,
+    .add-listing
+    {
+        background-color: #333;
+    }
+  </style>
+  {% endblock %}
