@@ -29,8 +29,9 @@ python3 -m venv env
 source env/bin/activate  # On Windows use `env\Scripts\activate`
 ```
 3 **Install Dependencies:**
+```
 pip install -r requirements.txt
-
+```
 4 **Apply Migrations**:
 ```
 python manage.py migrate
