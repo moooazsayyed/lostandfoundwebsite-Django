@@ -1,6 +1,5 @@
-# lostandfoundwebsite-Django
-Django project I made in my 3 semester
 # Lost and Found Web Portal
+Django project I made in my 3 semester
 
 Welcome to the Lost and Found Web Portal, an innovative platform designed to help users reclaim their lost possessions efficiently. Built using the robust Django framework, this application highlights exceptional backend development and debugging skills to ensure a seamless and user-friendly experience.
 
